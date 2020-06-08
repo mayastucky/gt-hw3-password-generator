@@ -112,21 +112,12 @@ function writePassword() {
     var randomPasswordNum = Math.floor(Math.random() * userChoices.length);
     console.log(randomPasswordNum);
     password += userChoices[randomPasswordNum];
-    console.log(password);
+    // console.log(password);
   }
-  alert("Your secure password is: " + password);
-
-  //}
-
-  // function generatePassword() stored as var password within function writePassword
-  var password = writePassword();
-
   //variable passwordText = gets first element with ID password
   var passwordText = document.querySelector("#password");
-
   // sets the value the computer generates equal to the variable password
-  // passwordText.value = password;
+  passwordText.innerHTML = password;
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
