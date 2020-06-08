@@ -8,8 +8,8 @@ function writePassword() {
     "Please enter desired password length between 8 and 128 characters"
   );
   //have function run again if it does not meet requirements
-  if (passwordLength < 8 || passwordLength > 128) {
-    alert("Please enter a password between 8 and 128 characters");
+  if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
+    alert("Please enter a length between 8 and 128 characters");
     return writePassword();
   }
   //asks user to select "ok" or "cancel" for each type of character
